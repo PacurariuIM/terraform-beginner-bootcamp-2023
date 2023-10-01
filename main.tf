@@ -9,7 +9,16 @@ terraform {
       version = "5.16.2"
     }
   }
+
+  cloud {
+    organization = "crazyfroggg"
+
+    workspaces {
+      name = "TerraHouse-1"
+    }
+  }
 }
+
 
 provider "aws" {
 }
