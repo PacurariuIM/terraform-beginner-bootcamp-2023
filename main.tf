@@ -17,6 +17,7 @@ terraform {
 }
 
 module "terrahouse_aws" {
+  assets_path = var.assets_path
   source = "./modules/terrahouse_aws"
   user_uuid = var.user_uuid
   bucket_name = var.bucket_name
