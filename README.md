@@ -1,6 +1,6 @@
 # Terraform Beginner Bootcamp 2023
 
-![Architectural diagram](<journal/assets/Screenshot 2023-10-02 123919.png>)
+![Architectural diagram](<journal/Screenshot 2023-10-02 123919.png>)
 
 ## Weekly Journals
 - [Week 0 Journal](journal/week0.md)
