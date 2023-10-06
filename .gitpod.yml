@@ -1,4 +1,6 @@
 tasks:
+  - env:
+      TF_LOG: DEBUG
   - name: terraform
     before: |
       cd $PROJECT_ROOT
