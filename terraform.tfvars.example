@@ -5,5 +5,5 @@ medianxl = {
 }
 starve = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/starve"
-  content_version = 3 
+  content_version = 5 
 }

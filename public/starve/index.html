@@ -3,10 +3,43 @@ Hello <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don't Starve Together</title>
+    <title>Don't Starve Together</title>    
+    <style>        
+        /* CSS code to set the background image */
+        body {
+            background-image: url('/assets/Dont+Starve+characters.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+            background-size: cover; /* This makes the image cover the entire viewport */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Makes the background image fixed, so it doesn't scroll with the content */
+        }
+        @keyframes scaleText {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size:xx-large;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);                  
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            animation: scaleText 2s infinite;
+        }
+        /* You can add more CSS styles for your content here */
+    </style>
 </head>
 <body>
     <h1>This is a multiplayer expansion for the amazing survival game Don't Starve.</h1>
-    <img src="/assets/ds_together.jpeg" width="200px"/>    
+    <!-- <img src="/assets/ds_together.jpeg" width="200px"/>     -->
+    <h2>How long can you survive?</h2>
 </body>
 </html>
