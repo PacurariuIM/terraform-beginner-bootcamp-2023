@@ -1,9 +1,9 @@
 terratowns_endpoint = "https://terratowns.cloud/api"
 medianxl = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/medianxl"
-  content_version = 2 
+  content_version = 4 
 }
 starve = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/starve"
-  content_version = 1 
+  content_version = 3 
 }
