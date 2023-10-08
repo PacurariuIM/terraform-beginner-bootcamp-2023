@@ -13,12 +13,12 @@ terraform {
   #    name = "terra-house-1"
   #  }
   #}
-  #cloud {
-  #  organization = "ExamPro"
-  #  workspaces {
-  #    name = "terra-house-1"
-  #  }
-  #}
+  cloud {
+   organization = "crazyfroggg"
+   workspaces {
+     name = "TerraHouse-1"
+   }
+  }
 
 }
 
@@ -28,13 +28,11 @@ provider "terratowns" {
   token= var.terratowns_access_token
 }
 
-module "terrahouse_aws" {
- source = "./modules/terrahouse_aws"
+module "home_medianxl_hosting" {
+ source = "./modules/terrahome_aws"
  user_uuid = var.user_uuid
- index_html_filepath = var.index_html_filepath
- error_html_filepath = var.error_html_filepath
- content_version = var.content_version
- assets_path = var.assets_path
+ public_path = var.medianxl.public_path
+ content_version = var.medianxl.content_version
 }
 
 resource "terratowns_home" "home" {
@@ -46,7 +44,28 @@ deep character customisation and challenging gameplay.
 It offers thousands of new items, new skills for all classes, 
 and multiple improvements to the Diablo II engine.
 DESCRIPTION
-  domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = module.home_medianxl_hosting.domain_name
   town = "missingo"
-  content_version = 1
+  content_version = var.medianxl.content_version
+}
+
+module "home_starve_hosting" {
+ source = "./modules/terrahome_aws"
+ user_uuid = var.user_uuid
+ public_path = var.starve.public_path
+ content_version = var.starve.content_version
+}
+
+resource "terratowns_home" "home_starve" {
+  name = "Don't Starve Together- Survival co-op adventure"
+  description = <<DESCRIPTION
+Don't Starve Together is the standalone multiplayer expansion 
+of the uncompromising wilderness survival game, Don't Starve. 
+Enter a strange and unexplored world full of strange creatures, 
+dangers, and surprises. Gather resources to craft items and 
+structures that match your survival style.
+DESCRIPTION
+  domain_name = module.home_starve_hosting.domain_name
+  town = "missingo"
+  content_version = var.starve.content_version
 }
