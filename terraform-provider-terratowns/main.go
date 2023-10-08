@@ -12,8 +12,6 @@ import (
 	"fmt"
 	"github.com/google/uuid"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
-	"github.com/google/uuid"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 )
@@ -34,18 +32,11 @@ type Config struct {
 	UserUuid string
 }
 
-type Config struct {
-	Endpoint string
-	Token string
-	UserUuid string
-}
-
 // in golang, a titlecase function will get exported.
 func Provider() *schema.Provider {
 	var p *schema.Provider
 	p = &schema.Provider{
 		ResourcesMap:  map[string]*schema.Resource{
-			"terratowns_home": Resource(),
 			"terratowns_home": Resource(),
 		},
 		DataSourcesMap:  map[string]*schema.Resource{
@@ -67,7 +58,6 @@ func Provider() *schema.Provider {
 				Type: schema.TypeString,
 				Required: true,
 				Description: "UUID for configuration",
-				ValidateFunc: validateUUID,
 				ValidateFunc: validateUUID,
 			},
 		},
