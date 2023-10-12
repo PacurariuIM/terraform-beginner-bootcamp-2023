@@ -3,10 +3,98 @@ Hello <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Median XL Sigma- a Diablo 2 Mod</title>
+    <title>Don't Starve Together</title>
+    <style>
+        @keyframes scaleText {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 20;
+            font-style: oblique;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+            max-width: fit-content;
+            color: blanchedalmond;
+        }
+        h1 {
+            color: whitesmoke;
+            text-align: center;
+            /* animation: scaleText 2s infinite; */
+            font-size: 40;
+            text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.5)
+        }
+        .container {
+            display: flex;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .column:nth-child(odd) {
+            background-color: transparent;
+        }
+
+        .column:nth-child(even) {
+            background-color: transparent;
+        }
+        img {
+            max-width: fit-content;
+            height: auto;
+        }
+        p {
+            color: beige;
+            text-shadow: 2px 2px black ;
+        }
+    </style>      
 </head>
-<body>
-    <h1>Welcome to a short guide regarding an awesome mod for an awesome game!</h1>
-    <img src="/assets/d2medianLogo.jpg" width="300px" />    
+<body style="background-image: url(./assets/DSbackground.jpg); position:absolute; width: fit-content; height: fit-content;">
+    <h1>Don't Starve Together!</h1>
+    <!-- <img src="./assets/d2medianLogo.jpg" width="1000px" /> -->
+    <h2>
+        "Don't Starve Together" is a whimsical multiplayer survival game where you and your buddies are plopped into a bizarre world filled with quirky critters, unpredictable weather, and a ravenous appetite for teamwork, all set to serve up a side dish of laughs as you try to stay well-fed and alive.
+    </h2>
+    <hr>    
+    <div class="container">
+        <div class="column">
+            <img src="./assets/pic1.jpg" width="100%">
+            <p>Pick up simple resources, craft basic tools, weapons, traps and whatnot!</p>
+
+        </div>
+        <div class="column">
+            <p>Create your kooky haven by building a base to escape the wacky, ever-threatening world!</p>
+            <img src="./assets/pic4.jpg" width="100%">
+        </div>
+        <div class="column">
+            <img src="./assets/pic2.jpg" width="100%">
+            <p>Slaughter spiders, rabbits, hounds and many different monsters to stay sane in a crazy, cartoonish world!</p>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="column">
+            <a href="https://www.klei.com/games/dont-starve">Main homepage</a>
+        </div>
+        <div class="column">
+            <a href="https://store.steampowered.com/app/322330/Dont_Starve_Together/">Don't Starve Together on Steam</a>
+        </div>
+        <div class="column">
+            <a href="https://en.wikipedia.org/wiki/Don%27t_Starve">Don't Starve- Wikipedia</a>
+        </div>        
+    </div>
+    <hr>
+    <h3>
+        <img src="./assets/Don't Starve Banner.png" width="100%">
+    </h3>
 </body>
 </html>
